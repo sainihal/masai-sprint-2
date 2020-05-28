@@ -1,0 +1,17 @@
+#container div>img {
+    height: 50px;
+    width: 50px;
+}
+
+#container {
+    background-color: white;
+    margin-left: 25%;
+}
+
+#undo {
+    background-color: red;
+    width: 50px;
+    margin-top: 25px;
+    text-align: center;
+    float:left;
+}
