@@ -1,17 +1,32 @@
-#container div>img {
-    height: 50px;
-    width: 50px;
+#container div > img {
+  height: 50px;
+  width: 50px;
 }
 
 #container {
-    background-color: white;
-    margin-left: 25%;
+  background-color: white;
+  margin-left: 25%;
 }
 
 #undo {
-    background-color: red;
-    width: 50px;
-    margin-top: 25px;
-    text-align: center;
-    float:left;
+  background-color: crimson;
+  /* width: 50px; */
+  /* height: 50px; */
+  padding: 25px;
+  margin-top: 25px;
+  text-align: center;
+  float: left;
+  border-radius: 5px;
+  /* align-content: center; */
+  /* vertical-align: center; */
+}
+
+#play {
+  position: relative;
+  top: 45vh;
+  left: 45vw;
+  padding: 50px;
+  cursor: pointer;
+  background-color: crimson;
+  border-radius: 1vw;
 }
