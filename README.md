@@ -13,5 +13,6 @@ to
 move and select the
 other cell where he wants to place the coin.
 This has a ***undo***  option so players can undo their game till any point 
-and proceed.
+and proceed. To undo one has to double click the undo button.
+
 

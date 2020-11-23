@@ -50,22 +50,8 @@ function createUndo() {
     .insertBefore(undo, document.querySelector("div"));
 }
 
-//gives respective names for coins and invokes other createcoin functions
+//invokes other createcoin functions
 function createCoins() {
-  // for (var i = 0; i < 8; i++) {
-  //     document.getElementById("R1C" + i).textContent = "BlackPawn"
-  //     document.getElementById("R6C" + i).textContent = "WhitePawn"
-  // }
-  // document.getElementById("R0C0").textContent = document.getElementById("R0C7").textContent = "BlackEle"
-  // document.getElementById("R7C0").textContent = document.getElementById("R7C7").textContent = "WhiteEle"
-  // document.getElementById("R0C1").textContent = document.getElementById("R0C6").textContent = "BlackHorse"
-  // document.getElementById("R7C1").textContent = document.getElementById("R7C6").textContent = "WhiteHorse"
-  // document.getElementById("R0C2").textContent = document.getElementById("R0C5").textContent = "BlackCamel"
-  // document.getElementById("R7C2").textContent = document.getElementById("R7C5").textContent = "WhiteCamel"
-  // document.getElementById("R0C3").textContent = "BlackMinister"
-  // document.getElementById("R7C3").textContent = "WhiteMinister"
-  // document.getElementById("R0C4").textContent = "BlackKing"
-  // document.getElementById("R7C4").textContent = "WhiteKing"
   createBlackCoinImages();
   createWhiteCoinImages();
 }
@@ -146,6 +132,7 @@ function createWhiteCoinImages() {
 function createGame() {
   createBoard();
   createCoins();
+  createRules();
 }
 
 //stores the steps to help undo
@@ -227,4 +214,16 @@ function fetchPreviousState() {
   while (arr.length != 0) {
     arr.pop();
   }
+}
+
+function createRules(){
+  var div = document.createElement("div")
+  div.style.width = "400px"
+  div.style.border= "1px solid black"
+  div.innerHTML = "<div style=\"padding:15px;font-size:18px\"><h1>Rules for the game.</h1><br /><p>1)Click on the coin which needs to be selected.</p><br/><p>2)Next click on cell where the coin needs to be placed.</p> <br /><p> 3) To undo a move double click on the undo button. </p></div>"
+  div.style.position = "fixed"
+  div.style.top = "100px"
+  div.style.right = "5px"
+  div.style.backgroundColor =  "rgb(179, 119, 0,0.8)"
+  document.getElementById("container").appendChild(div)
 }
