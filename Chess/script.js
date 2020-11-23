@@ -45,6 +45,8 @@ function createUndo() {
   undo.setAttribute("id", "undo");
   undo.textContent = "UNDO";
   undo.addEventListener("click", fetchPreviousState);
+  undo.style.position = "relative"
+  undo.style.left="150px"
   document
     .querySelector("body")
     .insertBefore(undo, document.querySelector("div"));
